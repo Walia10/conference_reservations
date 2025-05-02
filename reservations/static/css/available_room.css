@@ -1,0 +1,62 @@
+body {
+    background-color: #eef1f5;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #003366;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #003366;
+}
+
+.room-box {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+}
+
+.room-box:hover {
+    background-color: #e6f2ff;
+}
+
+.room-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+.room-info {
+    margin-top: 8px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.no-rooms {
+    background-color: #fff3cd;
+    padding: 15px;
+    border: 1px dashed #999;
+    text-align: center;
+    border-radius: 5px;
+    font-style: italic;
+    color: #856404;
+}

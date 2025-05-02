@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>My Reservations</h2>
+{% for r in reservations %}
+  <p>{{ r.room.name }} - {{ r.date }} {{ r.start_time }} to {{ r.end_time }}</p>
+{% empty %}
+  <p>No reservations yet.</p>
+{% endfor %}
+
+
+</body>
+</html>

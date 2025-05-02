@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Conference Room Portal</title>
+    <style>
+        body {
+            background-color: #e6ffe6; /* Light green */
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(to right, #ffb6c1, #fff176); /* Pink to Yellow */
+            padding: 30px;
+            text-align: center;
+            color: #2c3e50;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .container {
+            padding: 40px;
+            text-align: center;
+        }
+        .room {
+            background-color: white;
+            border: 2px solid #a5d6a7;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 60%;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .room p {
+            font-size: 1.2em;
+        }
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 24px;
+            font-size: 1em;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn-green { background-color: #81c784; color: white; }
+        .btn-pink { background-color: #f48fb1; color: white; }
+        .btn-yellow { background-color: #fff176; color: #000; }
+        .button:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Conference Room Reservations Portal</h1>
+    <p>Plan smart. Reserve easy.</p>
+</header>
+
+<div class="container">
+    <a href="{% url 'login' %}" class="button btn-pink">Login / Register</a>
+    <a href="{% url 'my_reservations' %}" class="button btn-yellow">My Bookings</a>
+</div>
+
+<!--<div class="container">-->
+<!--    <h2>Available Rooms</h2>-->
+<!--    {% for room in rooms %}-->
+<!--        <div class="room">-->
+<!--            <p><strong>{{ room.name }}</strong> — Capacity: {{ room.capacity }}</p>-->
+<!--            <a href="{% url 'make_reservation' room.id %}" class="button btn-green">Reserve</a>-->
+<!--        </div>-->
+<!--    {% endfor %}-->
+<!--</div>-->
+
+</body>
+</html>
