@@ -1,4 +1,6 @@
 from pathlib import Path
+import os
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -59,22 +61,10 @@ DATABASES = {
     }
 }
 
-# Password validation
 
-AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
-]
+
+AUTH_PASSWORD_VALIDATORS = []
+
 
 # Internationalization
 
@@ -88,9 +78,12 @@ USE_TZ = True
 
 # Static files
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / "static"]
 
+STATIC_URL = '/static/'
+# To load custom CSS from static directory
+
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'reservations/static')]
 
 # Default primary key field type
 
@@ -98,6 +91,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Auth redirect URLs
 
-LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/'
 LOGIN_URL = '/accounts/login/'
+
+LOGIN_REDIRECT_URL = '/dashboard/'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+DEFAULT_FROM_EMAIL = 'noreply@conferencebooking.com'
