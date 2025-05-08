@@ -14,7 +14,7 @@ from .forms import EditReservationForm
 from datetime import datetime, timedelta
 from django.core.mail import send_mail
 from django.conf import settings
-
+from django.contrib.auth import logout
 
 
 @login_required
@@ -106,7 +106,7 @@ def edit_reservation(request, reservation_id):
             # Update start and end time based on new_time
             reservation.date = new_date
             reservation.start_time = new_time
-            reservation.end_time = (datetime.combine(new_date, new_time) + timedelta(hours=1)).time()  # assuming 1-hour slots
+            reservation.end_time = (datetime.combine(new_date, new_time) + timedelta(hours=1)).time()
 
             reservation.save()
             return redirect('my_reservations')
@@ -135,9 +135,12 @@ def admin_required(view_func):
 def admin_dashboard(request):
     return render(request, 'reservations/dashboard.html')
 
+
+
 def admin_logout(request):
     logout(request)
-    return redirect('/accounts/login/')
+    return redirect('login')
+
 @admin_required
 def manage_rooms(request):
 
@@ -183,7 +186,7 @@ def manage_users(request):
     users = User.objects.all()
     return render(request, 'reservations/users.html', {'users': users})
 
-
+@admin_required
 def make_reservation(request, room_id):
     room = get_object_or_404(Room, id=room_id)
     if request.method == 'POST':
@@ -198,3 +201,79 @@ def make_reservation(request, room_id):
         form = ReservationForm()
     return render(request, 'make_reservation.html', {'form': form, 'room': room})
 
+
+@admin_required
+def delete_reservation_admin(request, reservation_id):
+    reservation = get_object_or_404(Reservation, id=reservation_id)
+    reservation.delete()
+    return redirect('manage_reservations')
+
+@admin_required
+def edit_user(request, user_id):
+    user = get_object_or_404(User, id=user_id)
+
+    if request.method == 'POST':
+        new_username = request.POST['username']
+
+        # Optional: prevent admin from renaming themselves to an empty string
+        if user == request.user and new_username.strip() == "":
+            messages.error(request, "You cannot blank your own username.")
+            return redirect('manage_users')
+
+        user.username = new_username
+        user.save()
+        messages.success(request, f"Username updated to '{new_username}'.")
+        return redirect('manage_users')
+
+    return render(request, 'reservations/edit_user.html', {'user': user})
+
+@admin_required
+def delete_user(request, user_id):
+    user = get_object_or_404(User, id=user_id)
+
+    if user == request.user:
+        messages.error(request, "You cannot delete your own account while logged in.")
+        return redirect('manage_users')
+
+    if request.method == 'POST':
+        user.delete()
+        messages.success(request, f"User '{user.username}' was deleted.")
+        return redirect('manage_users')
+
+    return render(request, 'reservations/confirm_delete_user.html', {'user': user})
+
+def admin_manage_reservations(request):
+    reservations = Reservation.objects.all().order_by('-date', '-start_time')
+    return render(request, 'reservations/admin_manage_reservations.html', {'reservations': reservations})
+
+@login_required
+@user_passes_test(lambda u: u.is_superuser)
+def edit_reservation_admin(request, reservation_id):
+    reservation = get_object_or_404(Reservation, id=reservation_id)
+    if request.method == 'POST':
+        form = EditReservationForm(request.POST, instance=reservation)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Reservation updated successfully.')
+            return redirect('admin_manage_reservations')
+    else:
+        form = EditReservationForm(instance=reservation)
+    return render(request, 'reservations/edit_reservations_admin.html', {'form': form})
+
+@login_required
+@user_passes_test(lambda u: u.is_superuser)
+def delete_reservation_admin(request, reservation_id):
+    reservation = get_object_or_404(Reservation, id=reservation_id)
+    if request.method == 'POST':
+        reservation.delete()
+        messages.success(request, 'Reservation deleted successfully.')
+        return redirect('admin_manage_reservations')
+    return render(request, 'reservations/confirm_delete_user.html', {'object': reservation, 'type': 'reservation'})
+
+@login_required
+@user_passes_test(lambda u: u.is_superuser)
+def admin_manage_reservations(request):
+    reservations = Reservation.objects.select_related('room', 'user').all().order_by('-date', '-start_time')
+    return render(request, 'reservations/admin_manage_reservations.html', {
+        'reservations': reservations
+    })
