@@ -4,38 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b218854d-efbd-4b1f-81d2-8099ff303767" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reservations/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reservations/templates/reservations/add_room.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reservations/templates/reservations/admin_dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reservations/templates/reservations/available_rooms.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reservations/templates/reservations/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reservations/templates/reservations/dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reservations/templates/reservations/edit_reservation.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reservations/templates/reservations/edit_room.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reservations/templates/reservations/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reservations/templates/reservations/reservations.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reservations/templates/reservations/rooms.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reservations/templates/reservations/user_dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reservations/templates/reservations/users.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vercel.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/conference_reservations.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/conference_reservations.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conference_reservations/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/conference_reservations/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conference_reservations/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/conference_reservations/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservations/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/reservations/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservations/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/reservations/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservations/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/reservations/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservations/static/css/available_room.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservations/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/reservations/templates/registration/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservations/templates/reservations/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/reservations/templates/reservations/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservations/templates/reservations/make_reservations.html" beforeDir="false" afterPath="$PROJECT_DIR$/reservations/templates/reservations/make_reservations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservations/templates/reservations/my_reservations.html" beforeDir="false" afterPath="$PROJECT_DIR$/reservations/templates/reservations/my_reservations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservations/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/reservations/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservations/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/reservations/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="b218854d-efbd-4b1f-81d2-8099ff303767" name="Changes" comment="website" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -123,8 +92,17 @@
       <workItem from="1746312011648" duration="220000" />
       <workItem from="1746393014514" duration="39803000" />
       <workItem from="1746670137674" duration="52000" />
-      <workItem from="1746670202732" duration="4170000" />
+      <workItem from="1746670202732" duration="4521000" />
     </task>
+    <task id="LOCAL-00001" summary="website">
+      <option name="closed" value="true" />
+      <created>1746682745617</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1746682745617</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +118,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="website" />
+    <option name="LAST_COMMIT_MESSAGE" value="website" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
