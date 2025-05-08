@@ -12,15 +12,19 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect
 from .forms import EditReservationForm
 from datetime import datetime, timedelta
+from django.core.mail import send_mail
+from django.conf import settings
 
 
 
 @login_required
 def home_redirect_view(request):
-    if request.user.is_superuser:
-        return redirect('admin_dashboard')
-    else:
-        return redirect('dashboard')
+    if request.user.is_authenticated:
+        if request.user.is_superuser:
+            return redirect('admin_dashboard')
+        else:
+            return redirect('home')
+    return redirect('login')
 
 def home(request):
     rooms = Room.objects.all()
@@ -31,8 +35,7 @@ def available_rooms(request):
     rooms = Room.objects.all()
     return render(request, 'reservations/available_rooms.html', {'rooms': rooms})
 
-from django.core.mail import send_mail
-from django.conf import settings
+
 
 @login_required
 def confirm_booking(request, room_id):
@@ -181,4 +184,17 @@ def manage_users(request):
     return render(request, 'reservations/users.html', {'users': users})
 
 
+def make_reservation(request, room_id):
+    room = get_object_or_404(Room, id=room_id)
+    if request.method == 'POST':
+        form = ReservationForm(request.POST)
+        if form.is_valid():
+            reservation = form.save(commit=False)
+            reservation.user = request.user
+            reservation.room = room
+            reservation.save()
+            return redirect('my_reservations')
+    else:
+        form = ReservationForm()
+    return render(request, 'make_reservation.html', {'form': form, 'room': room})
 
