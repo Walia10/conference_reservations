@@ -13,8 +13,10 @@ class ReservationAdmin(admin.ModelAdmin):
     search_fields = ['room__name', 'user__username']
     autocomplete_fields = ['room', 'user']
 
-admin.site.register(Room, RoomAdmin)
-admin.site.register(Reservation, ReservationAdmin)
+
+admin.site.register(Room)
+admin.site.register(Reservation)
+
 
 # Optional but helpful: manage users from admin
 admin.site.unregister(User)

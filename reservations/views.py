@@ -15,8 +15,22 @@ from datetime import datetime, timedelta
 from django.core.mail import send_mail
 from django.conf import settings
 from django.contrib.auth import logout
+from rest_framework.decorators import permission_classes
+
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from rest_framework import status
+from django.contrib.auth.models import User
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import AllowAny
+from rest_framework.response import Response
+from rest_framework import status
 
 
+from rest_framework import viewsets
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from rest_framework.authentication import TokenAuthentication
+from .serializers import RoomSerializer, ReservationSerializer, UserSerializer
 @login_required
 def home_redirect_view(request):
     if request.user.is_authenticated:
@@ -186,6 +200,22 @@ def manage_users(request):
     users = User.objects.all()
     return render(request, 'reservations/users.html', {'users': users})
 
+
+
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def register_user(request):
+    username = request.data.get('username')
+    password = request.data.get('password')
+    if not username or not password:
+        return Response({'error': 'Username and password are required.'}, status=status.HTTP_400_BAD_REQUEST)
+
+    if User.objects.filter(username=username).exists():
+        return Response({'error': 'Username already exists.'}, status=status.HTTP_400_BAD_REQUEST)
+
+    user = User.objects.create_user(username=username, password=password)
+    return Response({'message': 'User created successfully.'}, status=status.HTTP_201_CREATED)
+
 @admin_required
 def make_reservation(request, room_id):
     room = get_object_or_404(Room, id=room_id)
@@ -277,3 +307,23 @@ def admin_manage_reservations(request):
     return render(request, 'reservations/admin_manage_reservations.html', {
         'reservations': reservations
     })
+
+# REST API ViewSets for React frontend
+
+
+class RoomViewSet(viewsets.ModelViewSet):
+    queryset = Room.objects.all()
+    serializer_class = RoomSerializer
+    permission_classes = [IsAuthenticatedOrReadOnly]
+    authentication_classes = [TokenAuthentication]
+
+class ReservationViewSet(viewsets.ModelViewSet):
+    queryset = Reservation.objects.all()
+    serializer_class = ReservationSerializer
+    permission_classes = [IsAuthenticatedOrReadOnly]
+    authentication_classes = [TokenAuthentication]
+
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+    permission_classes = [IsAuthenticatedOrReadOnly]
