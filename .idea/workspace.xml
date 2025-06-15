@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b218854d-efbd-4b1f-81d2-8099ff303767" name="Changes" comment="lastchecks">
-      <change afterPath="$PROJECT_DIR$/reservations/templates/reservations/admin_manage_reservations.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reservations/templates/reservations/confirm_delete_user.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reservations/templates/reservations/edit_reservations_admin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reservations/templates/reservations/edit_user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservations/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/reservations/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservations/templates/reservations/admin_dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/reservations/templates/reservations/admin_dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservations/templates/reservations/confirm_booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/reservations/templates/reservations/confirm_booking.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservations/templates/reservations/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/reservations/templates/reservations/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservations/templates/reservations/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/reservations/templates/reservations/users.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservations/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/reservations/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservations/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/reservations/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="b218854d-efbd-4b1f-81d2-8099ff303767" name="Changes" comment="lastchecks" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,16 +13,27 @@
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/exportToHTML" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
         <option value="HTML File" />
+        <option value="Python Script" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -44,12 +41,12 @@
     &quot;assignee&quot;: &quot;Walia10&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Walia10/conference_reservations.git&quot;,
-    &quot;accountId&quot;: &quot;6b03e7cd-3c1c-4186-81f0-170a7481edb8&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Walia10/conference_reservations",
+    "accountId": "6b03e7cd-3c1c-4186-81f0-170a7481edb8"
   }
-}</component>
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -69,7 +66,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "com.codeium.enabled": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Reactt",
     "last_opened_file_path": "/Users/himani.walia/Documents/Sem1_2025/Web_Application/conference_reservations3",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
@@ -86,6 +83,11 @@
     ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/src/components" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -107,6 +109,7 @@
       <workItem from="1746393014514" duration="39803000" />
       <workItem from="1746670137674" duration="52000" />
       <workItem from="1746670202732" duration="16232000" />
+      <workItem from="1749881232856" duration="16391000" />
     </task>
     <task id="LOCAL-00001" summary="website">
       <option name="closed" value="true" />
@@ -132,7 +135,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746685581060</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="lastchecks">
+      <option name="closed" value="true" />
+      <created>1749937349497</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1749937349497</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,7 +180,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/reservations/urls.py</url>
-          <line>12</line>
+          <line>17</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
