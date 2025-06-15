@@ -4,31 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b218854d-efbd-4b1f-81d2-8099ff303767" name="Changes" comment="lastchecks">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/AdminAllReservations.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/AdminDashboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/AdminRoomForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/AdminUserList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/CancelReservation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/DeleteRoom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/EditRoom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/MyBookings.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Register.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ReservationForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/RoomList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conference_reservations/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/conference_reservations/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conference_reservations/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/conference_reservations/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservations/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/reservations/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservations/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/reservations/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservations/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/reservations/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservations/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/reservations/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reservations/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/reservations/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="b218854d-efbd-4b1f-81d2-8099ff303767" name="Changes" comment="lastchecks" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,7 +27,13 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -77,30 +59,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;com.codeium.enabled&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/himani.walia/Documents/Sem1_2025/Web_Application/conference_reservations3&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;database.query.execution&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.codeium.enabled": "true",
+    "git-widget-placeholder": "Reactt",
+    "last_opened_file_path": "/Users/himani.walia/Documents/Sem1_2025/Web_Application/conference_reservations3",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "database.query.execution",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlite&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/frontend/src/components" />
@@ -127,7 +109,7 @@
       <workItem from="1746393014514" duration="39803000" />
       <workItem from="1746670137674" duration="52000" />
       <workItem from="1746670202732" duration="16232000" />
-      <workItem from="1749881232856" duration="16077000" />
+      <workItem from="1749881232856" duration="16391000" />
     </task>
     <task id="LOCAL-00001" summary="website">
       <option name="closed" value="true" />
@@ -153,7 +135,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746685581060</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="lastchecks">
+      <option name="closed" value="true" />
+      <created>1749937349497</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1749937349497</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
